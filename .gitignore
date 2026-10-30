@@ -1,0 +1,23 @@
+# Only the files listed here are published; everything else in this folder stays local.
+/*
+!/src/
+!/gradle/
+!/build.gradle
+!/gradle.properties
+!/gradlew.bat
+!/settings.gradle
+!/LICENSE
+!/DESCRIPTION.html
+!/README.md
+!/.gitignore
+# build output and caches
+build/
+.gradle/
+run/
+runs/
+out/
+bin/
+.idea/
+*.iml
+.vscode/
+.claude/

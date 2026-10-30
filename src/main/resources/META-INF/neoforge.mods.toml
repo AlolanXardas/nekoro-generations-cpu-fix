@@ -1,0 +1,34 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+    modId = "nekoro_generations_cpu_fix"
+    version = "1"
+    displayName = "Nekoro Generations CPU Fix"
+    authors = "Alolan Xardas"
+    description = "Stops the Generations-Core model worker thread from keeping one CPU core at 100% all the time."
+
+[[dependencies.nekoro_generations_cpu_fix]]
+    modId = "neoforge"
+    type = "required"
+    versionRange = "[21.1,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.nekoro_generations_cpu_fix]]
+    modId = "minecraft"
+    type = "required"
+    versionRange = "[1.21.1,1.22)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.nekoro_generations_cpu_fix]]
+    modId = "generations_core"
+    type = "required"
+    versionRange = "[1.2,)"
+    ordering = "AFTER"
+    side = "BOTH"
+
+[[mixins]]
+    config = "nekoro_generations_cpu_fix.mixins.json"

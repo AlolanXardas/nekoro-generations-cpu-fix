@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "dev.xardas.nekorogenerationscpufix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TaskQueueMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
