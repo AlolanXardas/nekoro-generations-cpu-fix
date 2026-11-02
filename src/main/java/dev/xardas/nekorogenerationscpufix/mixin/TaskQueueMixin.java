@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 
 /**
  * Generations-Core starts one worker thread for compiling its models. In 1.2.8 the thread loops on
@@ -19,6 +20,8 @@ public abstract class TaskQueueMixin {
     private static final Logger LOGGER = LoggerFactory.getLogger("Nekoro Generations CPU Fix");
 
     @Shadow @Final private BlockingQueue<Runnable> taskQueue;
+
+    @Unique private int failures;
 
     /**
      * @author Alolan Xardas
@@ -32,7 +35,10 @@ public abstract class TaskQueueMixin {
                 try {
                     task.run();
                 } catch (Exception e) {
-                    LOGGER.error("Generations-Core model task failed", e);
+                    // when the game closes, every model still waiting fails at once ("zip file closed");
+                    // the full error is logged once, the rest only count
+                    if (failures++ == 0) LOGGER.error("Generations-Core model task failed", e);
+                    else LOGGER.debug("Generations-Core model task failed ({} so far): {}", failures, e.toString());
                 }
             }
         } catch (InterruptedException e) {

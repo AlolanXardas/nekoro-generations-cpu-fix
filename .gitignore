@@ -1,6 +1,7 @@
 # Only the files listed here are published; everything else in this folder stays local.
 /*
 !/src/
+!/fabric-1.21.1/
 !/gradle/
 !/build.gradle
 !/gradle.properties

@@ -1,0 +1,51 @@
+plugins {
+    id 'fabric-loom' version '1.17.20'
+    id 'java-library'
+}
+
+version = mod_version
+group = 'dev.xardas'
+base.archivesName = 'nekoro_generations_cpu_fix'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+// the same mixin as the NeoForge version; only the NeoForge entry class and metadata stay out
+sourceSets.main {
+    java {
+        srcDir '../src/main/java'
+        exclude '**/NekoroGenerationsCpuFix.java'
+    }
+    resources {
+        srcDir '../src/main/resources'
+        exclude 'META-INF/neoforge.mods.toml', 'pack.mcmeta'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Generations-Core is not needed to compile: the mixin targets its class by name
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${loader_version}"
+}
+
+processResources {
+    inputs.property 'version', version
+    filesMatching('fabric.mod.json') {
+        expand version: version
+    }
+}
+
+jar {
+    from('../LICENSE')
+}
+
+remapJar {
+    archiveFileName = "Nekoro-GCF-${version}-Fabric-${minecraft_version}.jar"
+}
