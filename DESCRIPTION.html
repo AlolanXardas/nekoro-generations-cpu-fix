@@ -1,12 +1,22 @@
-<p style="text-align: center;"><span style="color: #b96ad9;">If you find a bug, have an idea for an improvement or would like a similar small mod, let me know in the comments or on <a href="https://discord.gg/QxRtHCJ57R" target="_blank" rel="nofollow noopener"><span style="color: #3598db; text-decoration: underline;">Discord</span></a> and I&rsquo;ll do my best.</span></p>
-<p style="text-align: center;"><span style="color: #fff;">A tiny fix for <a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/generations-core" target="_blank" rel="nofollow noopener">Generations-Core</a> that gives you back one CPU core.<br>Made mainly for my <a style="color: #3598db;" href="https://www.curseforge.com/minecraft/modpacks/nekoropolia" target="_blank" rel="nofollow noopener">Nekoro Pokemon</a> modpack, but it works in any pack with Generations-Core.</span></p>
-<h3 style="text-align: center;"><span style="color: #b96ad9;">What it fixes</span></h3>
-<p style="text-align: center;"><span style="color: #fff;">Generations-Core runs a background thread that prepares its Pok&eacute;mon models. In version 1.2.8 that thread never rests: it keeps checking for new work over and over, so <strong>one CPU core stays at 100% for the whole game</strong>, even when you are standing still in an empty world.<br>That core is missing for chunk loading and other mods, and your CPU runs hotter than it needs to.</span></p>
-<p style="text-align: center;"><span style="color: #fff;">This mod changes only that one loop. The thread now sleeps until a model really needs preparing and then works exactly as before.<br>Nothing else in Generations-Core is touched and nothing changes in game.</span></p>
-<p style="text-align: center;"><span style="color: #fff;">&bull; No config, just drop it in<br>&bull; Client-side: on a server it does nothing, so it&rsquo;s harmless in server packs<br>&bull; If a future Generations-Core version fixes this itself, the mod simply stops applying and writes a note in the log</span></p>
-<h3 style="text-align: center;"><span style="color: #b96ad9;">Requires</span></h3>
-<p style="text-align: center;"><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/generations-core" target="_blank" rel="nofollow noopener">Generations-Core</a> <span style="color: #fff;">1.2+</span><br><span style="color: #fff;">Minecraft 1.21.1: NeoForge or Fabric</span></p>
-<h3 style="text-align: center;"><span style="color: #b96ad9;">AI Usage</span></h3>
-<p style="text-align: center;"><span style="color: #fff;">I use AI (Claude) only for writing code and editing text.<br>I don&rsquo;t like releasing things that aren&rsquo;t in the best shape I can make them.<br>AI saves me many hours on the parts I find tedious, which leaves me more time for the creative side.<br>Anything I didn&rsquo;t make is listed in the Credits section, together with the terms I use it under.</span></p>
-<h3 style="text-align: center;"><span style="color: #b96ad9;">Credits</span></h3>
-<p style="text-align: center;"><span style="color: #fff;">Mod by Alolan Xardas, code written with Claude, released under the MIT License.<br>Generations-Core belongs to the Generations team and is licensed under GPL-3.0. This mod contains none of its code.</span></p>
+<p style="text-align: center;">A tiny fix for <a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/generations-core" target="_blank" rel="nofollow noopener">Generations-Core</a> that gives you back one CPU core.<br>Made for my <a style="color: #3598db;" href="https://www.curseforge.com/minecraft/modpacks/nekoropolia" target="_blank" rel="nofollow noopener">Nekoro Pokemon</a> modpack, but it works in any pack with Generations-Core.</p>
+<p style="text-align: center;"><strong>Client only. Requires Generations-Core 1.2+.</strong></p>
+<h2 style="text-align: center;"><span style="color: #b96ad9; font-size: 18pt;">Work in progress</span></h2>
+<p style="text-align: center;">All my projects are being prepared for a big update of my modpack. I'm changing them step by step so they fit together, and they should be ready by the end of this year.<br>Many graphics are temporary until the mechanics of all my mods are finished.</p>
+<p style="text-align: center;">Found a bug, have an idea, or need this mod on another loader or Minecraft version?<br>Tell me in the comments or on <a style="color: #3598db;" href="https://discord.gg/QxRtHCJ57R" target="_blank" rel="nofollow noopener">Discord</a>.</p>
+<h2><span style="color: #b96ad9; font-size: 18pt;">What it fixes</span></h2>
+<p>Generations-Core runs a background thread that prepares its Pok&eacute;mon models. In version 1.2.8 that thread never rests, so one CPU core stays at 100% for the whole game, even in an empty world. That core is missing for chunk loading and other mods, and your CPU runs hotter than it needs to.</p>
+<p>This mod changes only that one loop: the thread now sleeps until a model really needs preparing. Nothing else changes in game.</p>
+<ul>
+<li>No config, just drop it in.</li>
+<li>On a server it does nothing, so it's harmless in server packs.</li>
+<li>If a future Generations-Core version fixes this itself, the mod stops applying and writes a note in the log.</li>
+</ul>
+<h2><span style="color: #b96ad9; font-size: 18pt;">More information</span></h2>
+<p><span style="font-size: 14pt;"><strong>Legal</strong></span></p>
+<div class="spoiler">
+<ul>
+<li>Mod by Alolan Xardas, released under the MIT License.</li>
+<li>I use AI (Claude) mainly for coding.</li>
+<li>Generations-Core belongs to the Generations team and is licensed under GPL-3.0. This mod contains none of its code.</li>
+</ul>
+</div>
