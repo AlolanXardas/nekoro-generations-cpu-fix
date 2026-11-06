@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "nekoro_generations_cpu_fix",
+  "id": "nekorogenerationscpufix",
   "version": "${version}",
   "name": "Nekoro Generations CPU Fix",
   "description": "Stops the Generations-Core model worker thread from keeping one CPU core at 100% all the time.",
@@ -10,7 +10,7 @@
   "license": "MIT",
   "environment": "*",
   "mixins": [
-    "nekoro_generations_cpu_fix.mixins.json"
+    "nekorogenerationscpufix.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.0",
