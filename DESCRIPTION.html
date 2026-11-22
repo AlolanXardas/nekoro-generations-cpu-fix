@@ -1,22 +1,39 @@
-<p style="text-align: center;">A tiny fix for <a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/generations-core" target="_blank" rel="nofollow noopener">Generations-Core</a> that gives you back one CPU core.<br>Made for my <a style="color: #3598db;" href="https://www.curseforge.com/minecraft/modpacks/nekoropolia" target="_blank" rel="nofollow noopener">Nekoro Pokemon</a> modpack, but it works in any pack with Generations-Core.</p>
-<p style="text-align: center;"><strong>Client only. Requires Generations-Core 1.2+.</strong></p>
-<h2 style="text-align: center;"><span style="color: #b96ad9; font-size: 18pt;">Work in progress</span></h2>
-<p style="text-align: center;">All my projects are being prepared for a big update of my modpack. I'm changing them step by step so they fit together, and they should be ready by the end of this year.<br>Many graphics are temporary until the mechanics of all my mods are finished.</p>
-<p style="text-align: center;">Found a bug, have an idea, or need this mod on another loader or Minecraft version?<br>Tell me in the comments or on <a style="color: #3598db;" href="https://discord.gg/QxRtHCJ57R" target="_blank" rel="nofollow noopener">Discord</a>.</p>
-<h2><span style="color: #b96ad9; font-size: 18pt;">What it fixes</span></h2>
-<p>Generations-Core runs a background thread that prepares its Pok&eacute;mon models. In version 1.2.8 that thread never rests, so one CPU core stays at 100% for the whole game, even in an empty world. That core is missing for chunk loading and other mods, and your CPU runs hotter than it needs to.</p>
-<p>This mod changes only that one loop: the thread now sleeps until a model really needs preparing. Nothing else changes in game.</p>
+<p style="text-align: center;">A fix for Generations-Core that gives you back one CPU core.<br><strong>Client only.<br>Requires <a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/generations-core" target="_blank" rel="nofollow noopener">Generations-Core</a> 1.2 or newer.</strong></p>
+<p style="text-align: center;">Report bugs and share ideas in the comments or on <a style="color: #3598db;" href="https://discord.gg/QxRtHCJ57R" target="_blank" rel="nofollow noopener">Discord</a>.</p>
+<p><span style="font-size: 14pt;"><strong>My projects</strong></span></p>
+<div class="spoiler">
 <ul>
-<li>No config, just drop it in.</li>
-<li>On a server it does nothing, so it's harmless in server packs.</li>
-<li>If a future Generations-Core version fixes this itself, the mod stops applying and writes a note in the log.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/modpacks/nekoropolia" target="_blank" rel="nofollow noopener"><strong>Nekoro Pokemon</strong></a>: The Cobblemon modpack all my projects are made for.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/nekoro-g" target="_blank" rel="nofollow noopener"><strong>Nekoro Gear</strong></a>: Crystals, metals, gear and building blocks.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/nekoro-c" target="_blank" rel="nofollow noopener"><strong>Nekoro Coins</strong></a>: Coins for quests, shops and loot boxes.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/nekoro-s" target="_blank" rel="nofollow noopener"><strong>Nekoro Shop</strong></a>: A server shop and a player market that use coins.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/nekoro-ce" target="_blank" rel="nofollow noopener"><strong>Nekoro Collector Edition</strong></a>: Copies of the building blocks you collect, plus bags.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/nekoro-rd" target="_blank" rel="nofollow noopener"><strong>Nekoro Random Drop</strong></a>: Extra drops from blocks, mobs and Pok&eacute;mon.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/nekoro-ws" target="_blank" rel="nofollow noopener"><strong>Nekoro World Setup</strong></a>: Rules for the world, mobs and recipes.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/nekoro-qol" target="_blank" rel="nofollow noopener"><strong>Nekoro Quality of Life</strong></a>: Small changes that can each be turned off.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/mc-mods/nekoro-ftbcci" target="_blank" rel="nofollow noopener"><strong>Nekoro FTB Chunks - Cobblemon Icons</strong></a>: Pok&eacute;mon icons on the FTB Chunks map.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/texture-packs/nekoro-dm" target="_blank" rel="nofollow noopener"><strong>Nekoro Dark Mode</strong></a>: A dark interface in several colors.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/texture-packs/nekoro-eb" target="_blank" rel="nofollow noopener"><strong>Nekoro Enchanted Books</strong></a>: A different look for every enchanted book.</li>
+<li><a style="color: #3598db;" href="https://www.curseforge.com/minecraft/texture-packs/nekoro-f" target="_blank" rel="nofollow noopener"><strong>Nekoro Font</strong></a>: A new font.</li>
 </ul>
-<h2><span style="color: #b96ad9; font-size: 18pt;">More information</span></h2>
+</div>
+<p><span style="font-size: 14pt;"><strong>Features</strong></span></p>
+<div class="spoiler">
+<ul>
+<li>Generations-Core 1.2.8 keeps one CPU core busy for the whole game.</li>
+<li>This mod lets that thread sleep until a model needs preparing.</li>
+<li>Nothing else changes.</li>
+<li>No config.</li>
+<li>On a server it does nothing.</li>
+<li>If Generations-Core fixes this itself, the mod stops applying.</li>
+</ul>
+</div>
 <p><span style="font-size: 14pt;"><strong>Legal</strong></span></p>
 <div class="spoiler">
 <ul>
-<li>Mod by Alolan Xardas, released under the MIT License.</li>
-<li>I use AI (Claude) mainly for coding.</li>
-<li>Generations-Core belongs to the Generations team and is licensed under GPL-3.0. This mod contains none of its code.</li>
+<li>MIT License.</li>
+<li>The code is written with AI (Claude).</li>
+<li>Generations-Core belongs to the Generations team.</li>
+<li>This mod contains none of its code.</li>
 </ul>
 </div>
